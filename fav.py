@@ -32,6 +32,6 @@ else:
        print("executed script")
        date_time = time.strftime("%b %d %Y %-I:%M %p")
        print(date_time)
-       time.sleep(21600)
+       time.sleep(86400)
        os.execl(sys.executable, sys.executable, * sys.argv)
        
