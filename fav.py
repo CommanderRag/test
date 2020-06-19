@@ -13,7 +13,7 @@ n = notify_run.Notify()
 n = n.register()
 letters_only = re.sub("[^a-zA-Z://.0-9]",  # Search for all non-letters
                       " ",  # Replace all non-letters with spaces
-                      str(a))
+                      str(n))
 str1 = ""
 f = (letters_only[0:50])
 u = urlextract.URLExtract()
