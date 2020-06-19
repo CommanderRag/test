@@ -15,11 +15,11 @@ html=r.content
 soup=BeautifulSoup(html,'html.parser')
 text=soup.find_all(text=True)
 output="" 
-blcklist=[
+blacklist=[
           '[document]','noscript','header','html','meta','head','input','script'
           ]
 for t in text:
-        if t.parent.name not in blcklist:
+        if t.parent.name not in blacklist:
          output+='{}'.format(t)
 
  
