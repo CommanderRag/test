@@ -10,7 +10,7 @@ import notify_run
 
 
 n = notify_run.Notify()
-a = n.register()
+n = n.register()
 letters_only = re.sub("[^a-zA-Z://.0-9]",  # Search for all non-letters
                       " ",  # Replace all non-letters with spaces
                       str(a))
@@ -38,11 +38,11 @@ for t in text:
 
  
 if(output.find("Episode 155")!=-1):
-       notify.send("Episode 155 is out now!")
+       n.send("Episode 155 is out now!")
        sys.exit()
 
 else:
-       notify.send("Episode 155 is not out yet!")
+       n.send("Episode 155 is not out yet!")
        print("executed script")
        date_time = time.strftime("%b %d %Y %-I:%M %p")
        print(date_time)
