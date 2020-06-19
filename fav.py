@@ -6,7 +6,7 @@ import time
 import requests
 
 from bs4 import BeautifulSoup
-import Notify
+import notify_run
 
 
 n = notify_run.Notify()
