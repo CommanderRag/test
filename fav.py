@@ -1,6 +1,6 @@
 import os
 import re
-import urlextract
+#import urlextract
 import sys
 import time
 import requests
@@ -10,18 +10,10 @@ from notify_run import Notify
 
 
 notify=Notify()
-notify.register()
-#letters_only = re.sub("[^a-zA-Z://.0-9]",  # Search for all non-letters
-#                      " ",  # Replace all non-letters with spaces
- #                     str(n))
-#str1 = ""
-#f = (letters_only[0:50])
-#u = urlextract.URLExtract()
-#k = u.find_urls(f)
-#str2 = str1.join(k)
-#print(str2)
+print(notify.register())
+time.sleep(25)
 
-
+print("working")
 
 url="https://4anime.to/boruto-naruto-next-generations-episode-155?id=33531"
 r=requests.get(url)
