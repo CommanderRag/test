@@ -1,11 +1,25 @@
 import os
+import re
+import urlextract
 import sys
 import time
 import requests
-from bs4 import BeautifulSoup
-from notify_run import Notify
-notify=Notify()
 
+from bs4 import BeautifulSoup
+import Notify
+
+
+n = notify_run.Notify()
+a = n.register()
+letters_only = re.sub("[^a-zA-Z://.0-9]",  # Search for all non-letters
+                      " ",  # Replace all non-letters with spaces
+                      str(a))
+str1 = ""
+f = (letters_only[0:50])
+u = urlextract.URLExtract()
+k = u.find_urls(f)
+str2 = str1.join(k)
+print(str2)
 
 
 
