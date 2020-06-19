@@ -6,20 +6,20 @@ import time
 import requests
 
 from bs4 import BeautifulSoup
-import notify_run
+from notify_run import Notify
 
 
-n = notify_run.Notify()
-n = n.register()
-letters_only = re.sub("[^a-zA-Z://.0-9]",  # Search for all non-letters
+notify=Notify()
+notify.register()
+#letters_only = re.sub("[^a-zA-Z://.0-9]",  # Search for all non-letters
                       " ",  # Replace all non-letters with spaces
                       str(n))
-str1 = ""
-f = (letters_only[0:50])
-u = urlextract.URLExtract()
-k = u.find_urls(f)
-str2 = str1.join(k)
-print(str2)
+#str1 = ""
+#f = (letters_only[0:50])
+#u = urlextract.URLExtract()
+#k = u.find_urls(f)
+#str2 = str1.join(k)
+#print(str2)
 
 
 
@@ -38,11 +38,11 @@ for t in text:
 
  
 if(output.find("Episode 155")!=-1):
-       n.send("Episode 155 is out now!")
+       notify.send("Episode 155 is out now!")
        sys.exit()
 
 else:
-       n.send("Episode 155 is not out yet!")
+       notify.send("Episode 155 is not out yet!")
        print("executed script")
        date_time = time.strftime("%b %d %Y %-I:%M %p")
        print(date_time)
