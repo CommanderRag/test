@@ -12,8 +12,8 @@ from notify_run import Notify
 notify=Notify()
 notify.register()
 #letters_only = re.sub("[^a-zA-Z://.0-9]",  # Search for all non-letters
-                      " ",  # Replace all non-letters with spaces
-                      str(n))
+#                      " ",  # Replace all non-letters with spaces
+ #                     str(n))
 #str1 = ""
 #f = (letters_only[0:50])
 #u = urlextract.URLExtract()
