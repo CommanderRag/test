@@ -11,7 +11,7 @@ from notify_run import Notify
 
 notify=Notify()
 print(notify.register())
-time.sleep(25)
+time.sleep(40)
 
 print("working")
 
