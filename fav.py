@@ -42,7 +42,7 @@ while output.find("Episode 155") == -1:
                 ]
     for t in text:
         if t.parent.name not in blacklist:
-        output += '{}'.format(t)
+            output += '{}'.format(t)
 else:
     notify.send("Episode 155 is out now!")
     sys.exit()
