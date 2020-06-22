@@ -10,7 +10,7 @@ from notify_run import Notify
 notify = Notify()
 print(notify.register())
 time.sleep(40)
-
+sleep=86400
 print("working")
 
 url = "https://4anime.to/boruto-naruto-next-generations-episode-155?id=33531"
@@ -30,7 +30,10 @@ while output.find("Episode 155") == -1:
     notify.send("Episode 155 is not out yet!")
     print("executed script")
     
-    time.sleep(86400)
+    time.sleep(sleep)
+    sleep=sleep-18000
+    if sleep<=10800:
+        sleep=10800
     url = "https://4anime.to/boruto-naruto-next-generations-episode-155?id=33531"
     r = requests.get(url)
     html = r.content
@@ -47,9 +50,3 @@ else:
     notify.send("Episode 155 is out now!")
     sys.exit()
 
-# notify.send("Episode 155 is not out yet!")
-# print("executed script")
-# date_time = time.strftime("%b %d %Y %-I:%M %p")
-# print(date_time)
-# time.sleep(86400)
-# os.execl(sys.executable, sys.executable, * sys.argv)
