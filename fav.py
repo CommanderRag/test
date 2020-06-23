@@ -9,7 +9,7 @@ from notify_run import Notify
 
 notify = Notify()
 print(notify.register())
-time.sleep(40)
+time.sleep(50)
 sleep=86400
 print("working")
 
